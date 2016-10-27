@@ -49,12 +49,12 @@ const Button = (props) => (
 ```javascript
 // This prefixes everything with the webkit prefix.
 const myVendorPrefixer = (styles) => {
-  const prefixed = {};
+  const prefixed = {}
   for (let key in styles) {
-    prefixed["Webkit" + key[0].toUpperCase() + key.substr(1)] = styles[key];
+    prefixed["Webkit" + key[0].toUpperCase() + key.substr(1)] = styles[key]
   }
-  return prefixed;
-};
+  return prefixed
+}
 ```
 
 [npm version]: https://www.npmjs.com/package/react-vendor-prefixer-provider
