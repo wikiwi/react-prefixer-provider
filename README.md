@@ -1,7 +1,7 @@
 # react-vendor-prefixer-provider
 
-Provide a Vendor Prefixer via Context so you don't need to hard code or pass it through the whole component tree.
-Includes a HOC to inject the Vendor Prefixer from Context, so you don't need to deal with the context at all.
+Provide a vendor prefixer via context so you don't need to hard code or pass it through the whole component tree.
+Includes a HOC to inject the vendor prefixer from context, so you don't need to deal with the context at all.
 
 [![NPM Version Widget]][npm version]
 [![Build Status Widget]][build status]
