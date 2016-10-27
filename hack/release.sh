@@ -12,6 +12,6 @@ if [[ $# != 1 ]]; then
   exit 1
 fi
 
-npm version "$1" -m "react-jss-theme release %s"
+npm version "$1" -m "react-vendor-prefixer-provider release %s"
 
 echo "Please check your changes with 'git log' and finally execute 'git push --follow-tags'"
