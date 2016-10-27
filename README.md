@@ -27,7 +27,7 @@ const Button = withVendorPrefixer(RawButton)
 const App = () => (
   <VendorPrefixerProvider vendorPrefixer={myVendorPrefixer}>
     <Button style={appearance: "normal"}>Hello</Button>
-  </ThemeContextProvider>
+  </VendorPrefixerProvider>
 )
 
 ReactDOM.render(<App />, mountNode)
