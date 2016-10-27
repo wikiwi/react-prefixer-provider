@@ -18,7 +18,7 @@
   "typings": "./dist/typings/index.d.ts",
   "scripts": {
     "build": "gulp",
-    "clean": "rm -rf dist",
+    "clean": "rm -r -f dist",
     "ci:coveralls": "cat coverage/lcov.info | coveralls",
     "test": "npm run test:lint && npm run test:coverage",
     "test:coverage": "cross-env TS_NODE_PROJECT=./test/tsconfig.json istanbul cover -e .ts _mocha -- --opts mocha.opts",
