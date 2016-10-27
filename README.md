@@ -47,7 +47,7 @@ const Button = (props) => (
 ### Example implementation of `vendorPrefixer`
 
 ```javascript
-# This prefixes everything with the webkit prefix.
+// This prefixes everything with the webkit prefix.
 const myVendorPrefixer = (styles) => {
   const prefixed = {};
   for (let key in styles) {
