@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- 6
+- 4
+before_script:
+- npm prune
+script:
+- npm run test
+after_success:
+- npm run ci:coveralls
+before_deploy:
+- npm run build
+deploy:
+  provider: npm
+  on:
+    repo: wikiwi/react-vendor-prefixer-provider
+    tags: true
+    node: 4
+  skip_cleanup: true
+  email: vinh@wikiwi.io
+  api_key:
+    secure: OHMoVt/hz2g6eaKw6NZq9btGu97tCitQWUS3m4hA8bb1evY6DldyBLpXI+74QL5BL2/gbaqjcKwKhrkNQz50D8JiQUEWThCImyjuKq8kbtLHgX8eIAQQYxokkyxUfQQFUHTdQPzOZWMNp3yPM4RJkuJLWaPyRb8b+TZQn/hxNSCRbgCwi8yfTbygeo+1PZUCr1yBo1/LU2th+OPIeQgcf+9EzQwG9Ye1SBxJ2GdPy+QwJIhEjD3UsdaCgzULnKf7z+VouPhOHwu5qSg13eVFF3/w0S+FR96wUxMQgEDqSRgiTtxIobTDF1Wq44ovxSZgkz47Ei0+BGvHgkQo7mA72PnOxKP4YVVWr3zvOAbWw7WhJYKK8KBqKxUUCGPqvsktJwnldNHDNMEeYVl1D192jUxh5CB5EAEKQrIq0/ld014yMdgxyrABc5d3eSa7rmyjLHZ2ZYtfuQ6ICXovlWaJfdkxxGOTLK249pgm8KuP5RLk1vq8/mwT9Uxw8bTWG9LcyzML68LHBLutUIx0ffajpMxAIWO1Ukny8c50kR7QNNHHywMuyHURf0VbbVGP6Hj6D1lOpbO203V0faC0uPI5Jur7opdGrY1l3RJlcE8kQgGAlIqf92rAw21/2/YUh9oWlXriQ36V1OvyyGhOmtXZPlRPjPRvkgP0FFStyjSYCE4=
