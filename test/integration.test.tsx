@@ -42,6 +42,7 @@ describe("integration test", () => {
   it("should return prefixed styles", () => {
     wrapper.setProps({ style: { appearance: "normal" } });
     const { style } = wrapper.find("div").props();
-    assert.deepEqual(style, { WebkitAppearance: "normal" });
+    assert.deepEqual(style, { WebkitAppearance: "normal" },
+      "unexpected style");
   });
 });

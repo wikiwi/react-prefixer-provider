@@ -13,12 +13,13 @@ import { VendorPrefixerProviderContext } from "./vendorprefixerprovider";
 
 describe("withvendorprefixer.tsx", () => {
   describe("removeVendorPrefixerAttributes", () => {
-    it("should remove theme attributes", () => {
+    it("should remove hoc attributes", () => {
       const attrs: VendorPrefixerAttributes = {
         vendorPrefixer: null,
       };
       removeVendorPrefixerAttributes(attrs);
-      assert.isUndefined(attrs.vendorPrefixer);
+      assert.isUndefined(attrs.vendorPrefixer,
+        "hoc attributes were not removed");
     });
   });
 

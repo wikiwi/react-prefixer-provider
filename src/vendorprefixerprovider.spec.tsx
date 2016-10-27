@@ -28,14 +28,16 @@ describe("<VendorPrefixerProvider>", () => {
 
     it("should relay props to context", () => {
       const context = instance.getChildContext();
-      assert.strictEqual(context.vendorPrefixer, vendorPrefixer);
+      assert.strictEqual(context.vendorPrefixer, vendorPrefixer,
+        "venderPrefixer was not relayed to context");
     });
 
     it("should handle prop change", () => {
       const nextVendorPrefixer = (styles: any) => ({ abc: 123 });
       wrapper.setProps({ vendorPrefixer: nextVendorPrefixer });
       const context = instance.getChildContext();
-      assert.strictEqual(context.vendorPrefixer, nextVendorPrefixer);
+      assert.strictEqual(context.vendorPrefixer, nextVendorPrefixer,
+        "venderPrefixer was not relayed to context");
     });
   });
 });
