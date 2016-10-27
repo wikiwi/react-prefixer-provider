@@ -1,6 +1,6 @@
 {
   "name": "react-vendor-prefixer-provider",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-beta.1",
   "description": "Provide a Vendor Prefixer via Context",
   "homepage": "https://github.com/wikiwi/react-vendor-prefixer-provider",
   "repository": {
