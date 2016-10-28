@@ -10,17 +10,9 @@ import * as objectAssign from "object-assign";
 
 import { VendorPrefixerProviderContext } from "./vendorprefixerprovider";
 
-export interface VendorPrefixerOuterAttributes {
+export interface VendorPrefixerAttributes {
   vendorPrefixer?: (styles: any) => any;
 }
-
-export interface VendorPrefixerInnerAttributes {
-  vendorPrefixer?: (styles: any) => any;
-}
-
-export interface VendorPrefixerAttributes extends
-  VendorPrefixerOuterAttributes,
-  VendorPrefixerInnerAttributes { }
 
 export function removeVendorPrefixerAttributes(props: VendorPrefixerAttributes): void {
   delete props.vendorPrefixer;
