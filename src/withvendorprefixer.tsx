@@ -1,4 +1,5 @@
-/*
+/**
+ * @license
  * Copyright (C) 2016 Chi Vinh Le and contributors.
  *
  * This software may be modified and distributed under the terms
@@ -18,7 +19,8 @@ export function removeVendorPrefixerAttributes(props: VendorPrefixerAttributes):
   delete props.vendorPrefixer;
 }
 
-export function withVendorPrefixer<TProps extends VendorPrefixerAttributes>(TargetComponent: React.ComponentClass<TProps> | React.StatelessComponent<TProps>): React.ComponentClass<TProps> {
+export function withVendorPrefixer<TProps extends VendorPrefixerAttributes>(
+  TargetComponent: React.ComponentClass<TProps> | React.StatelessComponent<TProps>): React.ComponentClass<TProps> {
   return class WithVendorPrefixer extends React.PureComponent<TProps, {}> {
     public static contextTypes: any = {
       vendorPrefixer: React.PropTypes.func,
@@ -35,7 +37,7 @@ export function withVendorPrefixer<TProps extends VendorPrefixerAttributes>(Targ
         vendorPrefixer = this.noOp;
       }
       const props = objectAssign({}, this.props, {
-        vendorPrefixer
+        vendorPrefixer,
       } as VendorPrefixerAttributes);
       return <TargetComponent {...props } />;
     }
