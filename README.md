@@ -25,7 +25,7 @@ const RawButton = (props) => (
 const Button = withPrefixer(RawButton)
 
 const App = () => (
-  <PrefixerProvider prefixer={myPrefixer}>
+  <PrefixerProvider prefixer={prefixer}>
     <Button style={appearance: "normal"}>Hello</Button>
   </PrefixerProvider>
 )
@@ -48,7 +48,7 @@ const Button = (props) => (
 
 ```javascript
 // This prefixes everything with the webkit prefix.
-const myPrefixer = (styles) => {
+const prefixer = (styles) => {
   const prefixed = {}
   for (let key in styles) {
     prefixed["Webkit" + key[0].toUpperCase() + key.substr(1)] = styles[key]
