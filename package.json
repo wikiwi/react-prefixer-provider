@@ -1,14 +1,14 @@
 {
-  "name": "react-vendor-prefixer-provider",
+  "name": "react-prefixer-provider",
   "version": "0.1.0-beta.1",
   "description": "Provide a Vendor Prefixer via Context",
-  "homepage": "https://github.com/wikiwi/react-vendor-prefixer-provider",
+  "homepage": "https://github.com/wikiwi/react-prefixer-provider",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wikiwi/react-vendor-prefixer-provider.git"
+    "url": "git+https://github.com/wikiwi/react-prefixer-provider.git"
   },
   "bugs": {
-    "url": "https://github.com/wikiwi/react-vendor-prefixer-provider/issues"
+    "url": "https://github.com/wikiwi/react-prefixer-provider/issues"
   },
   "files": [
     "dist",
@@ -22,7 +22,7 @@
     "build": "gulp && webpack",
     "clean": "rm -r -f dist lib cjs coverage",
     "ci:coveralls": "cat coverage/lcov.info | coveralls",
-    "release": "npm version -m 'react-vendor-prefixer-provider release %s'",
+    "release": "npm version -m 'react-prefixer-provider release %s'",
     "lint": "gulp lint",
     "test": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha --opts mocha.opts",
     "test:coverage": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' istanbul cover node_modules/.bin/_mocha -- --opts mocha.opts",
@@ -32,12 +32,12 @@
     "node": ">=4"
   },
   "keywords": [
-    "vendor-prefix",
+    "prefix",
     "hoc",
     "context",
     "react"
   ],
-  "author": "Chi Vinh Le and contributors (https://github.com/wikiwi/react-vendor-prefixer-provider/graphs/contributors)",
+  "author": "Chi Vinh Le and contributors (https://github.com/wikiwi/react-prefixer-provider/graphs/contributors)",
   "license": "MIT",
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0-0"

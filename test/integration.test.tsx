@@ -10,12 +10,12 @@ import * as React from "react";
 import { mount, ReactWrapper } from "enzyme";
 import { assert } from "chai";
 import { createDOM, DOM } from "./dom";
-import { VendorPrefixerProvider } from "../src/vendorprefixerprovider";
-import { withVendorPrefixer } from "../src/withvendorprefixer";
+import { PrefixerProvider } from "../src/prefixerprovider";
+import { withPrefixer } from "../src/withprefixer";
 
 describe("integration test", () => {
-  const Component = withVendorPrefixer((props: any) => <div style={props.vendorPrefixer(props.style)} />);
-  const vendorPrefixer = (styles: any) => {
+  const Component = withPrefixer((props: any) => <div style={props.prefixer(props.style)} />);
+  const prefixer = (styles: any) => {
     const result: any = {};
     for (let key in styles) {
       result["Webkit" + key[0].toUpperCase() + key.substr(1)] = styles[key];
@@ -26,9 +26,9 @@ describe("integration test", () => {
   let wrapper: ReactWrapper<any, {}>;
 
   const App = (props: any) => (
-    <VendorPrefixerProvider vendorPrefixer={vendorPrefixer}>
+    <PrefixerProvider prefixer={prefixer}>
       <Component {...props} />
-    </VendorPrefixerProvider>
+    </PrefixerProvider>
   );
 
   before(() => {

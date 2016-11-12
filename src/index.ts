@@ -6,5 +6,5 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-export * from "./vendorprefixerprovider";
-export * from "./withvendorprefixer";
+export * from "./prefixerprovider";
+export * from "./withprefixer";

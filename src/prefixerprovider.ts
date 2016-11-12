@@ -8,17 +8,17 @@
 
 import * as React from "react";
 
-export interface VendorPrefixerProviderContext {
-  vendorPrefixer: (styles: any) => any;
+export interface PrefixerProviderContext {
+  prefixer: (styles: any) => any;
 }
 
-export class VendorPrefixerProvider extends React.PureComponent<VendorPrefixerProviderContext, {}> {
+export class PrefixerProvider extends React.PureComponent<PrefixerProviderContext, {}> {
   public static childContextTypes: any = {
-    vendorPrefixer: React.PropTypes.func.isRequired,
+    prefixer: React.PropTypes.func.isRequired,
   };
 
-  public getChildContext(): VendorPrefixerProviderContext {
-    return { vendorPrefixer: this.props.vendorPrefixer };
+  public getChildContext(): PrefixerProviderContext {
+    return { prefixer: this.props.prefixer };
   }
 
   public render(): React.ReactElement<any> {
